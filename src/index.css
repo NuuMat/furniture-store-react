@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+
+    background-color: #2b2b2b;
+}
+/* шапка и подвал сайта */
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+header .shop-cart-but {
+    float: right;
+    cursor: pointer;
+    transition: color 500ms ease;
+
+    transition: transform 500ms ease;
+}
+
+header .shop-cart-but:hover,
+header .shop-cart-but.active {
+    color: rgb(216, 87, 87);
+    transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #2b2b2b;
+    padding: 20px;
+    padding-bottom: 0px;
+
+    z-index: 1000;
+
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(130,130,130,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(130,130,130,1);
+    box-shadow: 3px 3px 5px 0px rgba(130,130,130,1);
+}
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .empty h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+header .shop-cart .item b {
+    color: #919191;
+}
+
+header .shop-cart .item .delete-icon {
+    float: right;
+    position: relative;
+    margin-top: -10px;
+    color: red;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    transform: scale(1.5);
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header ul.nav{
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    transition: opacity 500ms ease;
+    cursor: pointer;
+}
+
+
+header ul.nav li:hover {
+    opacity: 0.5;
+}
+
+header .presintation {
+    margin: 50px 0;
+    background: url('./images/Img.png') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #797979;
+    position: relative;
+}
+
+header .presintation::after {
+    content: 'Лучшие товары для вашего дома';
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 350px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header .presintation::before {
+    content: 'по низким ценам';
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* сатигории */
+.categories div {
+    display: inline-block;
+    background: rgb(64, 64, 64);
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover {
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover {
+   transform: scale(1.05);
+}
+
+main h2, main p, main b {
+    margin: 10px 20px;
+}
+
+main p {
+    color: rgb(183, 183, 183);
+}
+
+main b {
+    color: #66fa75;
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #84fc90;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: transform 500ms ease;
+}
+
+main .add-to-cart:hover {
+    transform: scale(1.1);
+}
+
+/* О нас */
+
+.about h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.about .aboutShop {
+    text-align: center;
+    font-size: 25px;
+}
+
+.about p {
+    width: 100%;
+    background: rgb(64, 64, 64);
+    padding: 10px 20px;
+}
